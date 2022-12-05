@@ -196,41 +196,36 @@ class Detail extends StatelessWidget{
                       SizedBox(
                         width: 30,
                       ),
-                      Expanded(
+                      Container(
+                          height: 30,
+                          width: 105,
+                          decoration: BoxDecoration(
+                              color: Colors.black12,
+                              borderRadius: BorderRadius.circular(20)
+                          ),
                           child: Row(
-                            children: <Widget>[
-                              Stack(
-                                children: [
-                                  Container(
-                                    height: 40,
-                                    width: 110,
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey,
-                                        borderRadius: BorderRadius.circular(50)
-                                    ),
-                                  ),
-                                  Positioned(
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Container(
-                                            child: InkWell(
-                                              child: IconButton(onPressed: () {}, icon: Icon(Icons.add_outlined)),
-                                            ),
-                                          ),
-                                          Container(
-                                            child: InkWell(
-                                              child: IconButton(onPressed: () {}, icon: Icon(Icons.add_outlined)),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                  )
-                                ],
-                              )
+                            children: [
+                              IconButton(
+                                color: Colors.black,
+                                onPressed: () {},
+                                icon: const Icon(
+                                  CupertinoIcons.minus,
+                                  size: 15,
+                                ),
+                              ),
+                              Text("1"),
+                              IconButton(
+                                color: Colors.black,
+                                onPressed: () {},
+                                icon: const Icon(
+                                  CupertinoIcons.add,
+                                  size: 15,
+                                ),
+                              ),
                             ],
                           )
-                      )
+
+                      ),
                     ],
                   ),
                 ),
@@ -271,7 +266,7 @@ class Detail extends StatelessWidget{
                                       height: 50,
                                       width: 230,
                                       decoration: BoxDecoration(
-                                          color: Colors.grey,
+                                          color: Colors.black,
                                           borderRadius: BorderRadius.circular(50)
                                       ),
                                     ),
@@ -281,11 +276,18 @@ class Detail extends StatelessWidget{
                                           children: [
                                             Container(
                                               child: InkWell(
-                                                child: IconButton(onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+                                                child:  IconButton(
+                                                  color: Colors.white,
+                                                  onPressed: () {},
+                                                  icon: const Icon(
+                                                    CupertinoIcons.cart,
+                                                    size: 20,
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                             Container(
-                                              child: Text("Add to cart",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                                              child: Text("Add to cart",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: Colors.white)),
                                             )
                                           ],
                                         )
