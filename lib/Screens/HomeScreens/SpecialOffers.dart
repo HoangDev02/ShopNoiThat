@@ -96,19 +96,22 @@ class SpecialOffers extends StatelessWidget{
             )
         ),
         Container(
-          padding: EdgeInsets.only(left: 20, top: 10, right: 20),
+          margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          // padding: EdgeInsets.only(left: 20, top: 10, right: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
                         decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(50)
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -121,16 +124,20 @@ class SpecialOffers extends StatelessWidget{
                     ],
                   ),
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        margin: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.chair_alt_rounded,color: Colors.black, size: 30,),
                           ],
@@ -139,16 +146,21 @@ class SpecialOffers extends StatelessWidget{
                     ],
                   )
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.table_chart,color: Colors.black, size: 30),
                           ],
@@ -157,15 +169,20 @@ class SpecialOffers extends StatelessWidget{
                     ],
                   )
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.kitchen,color: Colors.black, size: 30),
                           ],
@@ -226,19 +243,22 @@ class SpecialOffers extends StatelessWidget{
           ),
         ),
         Container(
-          padding: EdgeInsets.only(left: 20, top: 10, right: 20),
+          margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          // padding: EdgeInsets.only(left: 20, top: 10, right: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              OutlinedButton(
-                onPressed: () {},
+              InkWell(
+                onTap: () {},
                 child: Column(
                   children: [
                     Container(
                       margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                      width: 30,
+                      width: 55,
                       height: 55,
                       decoration: BoxDecoration(
+                          color: Colors.black12,
+                          borderRadius: BorderRadius.circular(50)
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -251,53 +271,67 @@ class SpecialOffers extends StatelessWidget{
                   ],
                 ),
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        margin: const EdgeInsets.fromLTRB(5, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.chair_alt_rounded,color: Colors.black, size: 30,),
+                            Icon(Icons.train,color: Colors.black, size: 30,),
                           ],
                         ),
                       ),
                     ],
                   )
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.table_chart,color: Colors.black, size: 30),
+                            Icon(Icons.adjust,color: Colors.black, size: 30),
                           ],
                         ),
                       ),
                     ],
                   )
               ),
-              OutlinedButton(
-                  onPressed: () {},
+              InkWell(
+                  onTap: () {},
                   child: Column(
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
+                        width: 55,
                         height: 55,
+                        decoration: BoxDecoration(
+                            color: Colors.black12,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.kitchen,color: Colors.black, size: 30),
+                            Icon(Icons.app_registration,color: Colors.black, size: 30),
                           ],
                         ),
                       ),
@@ -333,7 +367,8 @@ class SpecialOffers extends StatelessWidget{
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 0, top: 0, right: 20),
+                padding: EdgeInsets.only(left: 0, top: 0, right: 30),
+
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

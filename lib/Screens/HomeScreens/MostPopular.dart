@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -182,7 +184,7 @@ class MostPopular extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            // mainAxisAlignment: MainAxisAlignment.start,
                             children:<Widget> [
                               Stack(
                                 children: [
@@ -225,7 +227,7 @@ class MostPopular extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            // mainAxisAlignment: MainAxisAlignment.start,
                             children:<Widget> [
                               Stack(
                                 children: [
@@ -251,24 +253,28 @@ class MostPopular extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Foam Padded chair", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                            Text("Foam Padded chair", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
                             Container(
-                                // padding: EdgeInsets.all(20),
+                              // padding: EdgeInsets.all(20),
                               child: Row(
                                 children: [
                                   Icon(Icons.favorite),
                                   Text("4.5 | "),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
                                   Container(
                                     height: 30,
                                     width: 100,
                                     decoration: BoxDecoration(
-                                      color: Colors.black12,
-                                      borderRadius: BorderRadius.circular(15)
+                                        color: Colors.black12,
+                                        borderRadius: BorderRadius.circular(10)
                                     ),
                                     child: Stack(
                                       children: [
@@ -278,10 +284,49 @@ class MostPopular extends StatelessWidget {
                                         )
                                       ],
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
-                            )
+                            ),
+                            Text("1200.00", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(35, 0, 0, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Foam Padded chair", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+                            Container(
+                              // padding: EdgeInsets.all(20),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.favorite),
+                                  Text("4.5 | "),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    height: 30,
+                                    width: 100,
+                                    decoration: BoxDecoration(
+                                        color: Colors.black12,
+                                        borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          margin: const EdgeInsets.fromLTRB(20, 5, 0, 0),
+                                          child:Text("8,374 Sold"),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Text("1200.00", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
                           ],
                         ),
                       ),
