@@ -102,7 +102,9 @@ class SpecialOffers extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, 'createproduct');
+                  },
                   child: Column(
                     children: [
                       Container(
@@ -125,7 +127,10 @@ class SpecialOffers extends StatelessWidget{
                   ),
               ),
               InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, 'products');
+
+                  },
                   child: Column(
                     // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
