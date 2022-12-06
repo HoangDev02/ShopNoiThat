@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shopnoithat/Screens/cartScreens/cart.dart';
 import 'package:shopnoithat/pages/CartPages.dart';
 import 'package:shopnoithat/pages/Profile.dart';
@@ -9,6 +10,7 @@ import 'package:shopnoithat/pages/Profile.dart';
 import '../Screens//HomeScreens/MostPopular.dart';
 import '../Screens/HomeScreens/Search.dart';
 import '../Screens/HomeScreens/SpecialOffers.dart';
+import '../provider/user_provider.dart';
 
 class HomePages extends StatefulWidget {
   const HomePages({Key? key}) : super(key: key);
@@ -55,7 +57,7 @@ class _HomePageState extends State<HomePages> {
                   child: Column(
                     children: [
                       Text("Good Morning", style: TextStyle(fontSize: 17, fontWeight: FontWeight.normal),),
-                      Text("Andrew Aninsley",style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal, color: Colors.black)),
+                      Text("${context.watch<UserProvider>().user?.email}",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
                     ],
                   ),
                 )
@@ -99,7 +101,10 @@ class _HomePageState extends State<HomePages> {
               IconButton(
                 color: Colors.black,
                 onPressed: () {
-                  Navigator.pop(context, '/');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePages())
+                  );
                 },
                 icon: const Icon(
                   Icons.home_outlined,

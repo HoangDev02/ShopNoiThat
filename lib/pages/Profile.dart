@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../main.dart';
+import '../provider/user_provider.dart';
 
 class Profile extends StatelessWidget{
   @override
@@ -45,11 +49,8 @@ class Profile extends StatelessWidget{
               ),
               Container(
                 child: Column(
-                  children: const [
-                    Text('Andrew Ainsley', style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),),
+                  children:  [
+                    Text("${context.watch<UserProvider>().user?.email}",style: TextStyle(fontWeight: FontWeight.bold),),
                     Text('+1101212542124'),
                   ],
                 ),
@@ -297,9 +298,6 @@ class Profile extends StatelessWidget{
                     ),
                   ],
                 ),
-
-
-
               ),    Container(
                 width:  double.infinity,
                 height: 50,
@@ -389,7 +387,6 @@ class Profile extends StatelessWidget{
                                borderRadius: BorderRadius.vertical(top: Radius.circular(20))
                            ),
                            context: context, builder: (BuildContext content){
-
                          return Container(
                            height: 200,
                            color: Colors.white,
@@ -397,7 +394,17 @@ class Profile extends StatelessWidget{
                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                children:  [
                                ElevatedButton(onPressed: () {}, child: Text('Cancel')),
-                               ElevatedButton(onPressed: () {}, child: Text('Yes, Logout')),
+                                 InkWell(
+                                   child: Padding(padding: EdgeInsets.only(left: 8,right: 8,top: 5,bottom: 5),child: Text("Logout"),),
+                                   onTap: ()=>{
+                                     print("Logout"),
+                                     context.read<UserProvider>().logout(),
+                                     Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) => const MyApp()),
+                                     )
+                                   },
+                                 )
                           ]
                            ),
 
@@ -474,13 +481,14 @@ class Profile extends StatelessWidget{
                 IconButton(
                   color: Colors.black,
                   onPressed: (
-
                       ) {
-                    Navigator.pushNamed(context, 'profile');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyApp()),
+                    );
                   },
                   icon: const Icon(
                     CupertinoIcons.profile_circled,
-
                   ),
                 ),
               ],

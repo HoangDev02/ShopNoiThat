@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class Search extends StatelessWidget{
-
+  String? name;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,10 +30,16 @@ class Search extends StatelessWidget{
                         suffixIcon:Padding(
                           padding: const EdgeInsets.all(20),
                           child: Icon(Icons.filter_list),
-                        )
+                        ),
                     ),
+                    onChanged: (val){
+                      setState((){
+                        name= val;
+                        });
+                    },
                   ),
-                  onChanged: () {},
+                  onChanged: () {
+                  },
                 )
               ],
             ),
@@ -43,6 +49,8 @@ class Search extends StatelessWidget{
       ),
     );
   }
+
+  void setState(Null Function() param0) {}
 
 
 }

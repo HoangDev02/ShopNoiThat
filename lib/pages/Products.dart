@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../model/product.dart';
-
+import 'package:path/path.dart';
 class Products extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -59,12 +59,12 @@ class Products extends StatelessWidget{
                           Container(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
+                              children:<Widget> [
                                 Container(
                                   padding: EdgeInsets.all(5),
                                   child: InkWell(
                                       onTap: () {
-                                        // Navigator.pushNamed(context, 'productDetail');
+                                        // Navigator.push(context , MaterialPageRoute(builder: (context) => Products()));
                                       },
                                       child:Image.network('${product.img}')),
                                 )
