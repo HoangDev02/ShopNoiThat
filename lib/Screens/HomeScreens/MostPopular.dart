@@ -2,11 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopnoithat/pages/ProductDetail.dart';
+import 'package:shopnoithat/pages/Products.dart';
 
 class MostPopular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
     return Container(
       child: Column(
         children: [
@@ -22,7 +25,10 @@ class MostPopular extends StatelessWidget {
                 Expanded(
                     child:InkWell(
                       onTap: (){
-                        Navigator.pushNamed(context, 'special');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Products()),
+                        );
                       },
                     child: Container(
                       child: Text("See all", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -198,9 +204,12 @@ class MostPopular extends StatelessWidget {
                                               padding: EdgeInsets.all(5),
                                               child: InkWell(
                                                 onTap: () {
-                                                  Navigator.pushNamed(context, 'productDetail');
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(builder: (context) => ProductDetail()),
+                                                  );
                                                 },
-                                                child:Image.asset('images/ghe_2.png'),),
+                                                child:Image.asset('assets/images/ghe_2.png'),),
                                             )
                                           ],
                                         ),
@@ -237,7 +246,7 @@ class MostPopular extends StatelessWidget {
                                         child: Row(
                                           mainAxisAlignment: MainAxisAlignment.end,
                                           children: [
-                                            Image.asset('images/gheSofa_1.png'),
+                                            Image.asset('assets/images/gheSofa_1.png'),
                                           ],
                                         ),
                                       )

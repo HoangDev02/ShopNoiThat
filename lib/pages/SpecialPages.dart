@@ -14,7 +14,7 @@ class Special extends StatelessWidget{
             Container(
               child: InkWell(
                 onTap: (){
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pushNamed(context, 'products');
                 },
                 child: Column(
                   children: [
@@ -83,7 +83,7 @@ class Special extends StatelessWidget{
                                                 mainAxisAlignment: MainAxisAlignment.end,
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Image.asset('images/gheSofa_1.png',height: 190,),
+                                                  Image.asset('assets/images/gheSofa_1.png',height: 190,),
                                                 ],
                                               ),
                                             )
@@ -167,7 +167,7 @@ class Special extends StatelessWidget{
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Image.asset('images/gheSofa_5.png',height: 190,),
+                                          Image.asset('assets/images/gheSofa_5.png',height: 190,),
                                         ],
                                       ),
                                     )
@@ -247,7 +247,7 @@ class Special extends StatelessWidget{
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Image.asset('images/gheSofa_2.png',height: 190,),
+                                          Image.asset('assets/images/gheSofa_2.png',height: 190,),
                                         ],
                                       ),
                                     )
@@ -327,7 +327,7 @@ class Special extends StatelessWidget{
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Image.asset('images/gheSofa_3.png',height: 190,),
+                                          Image.asset('assets/images/gheSofa_3.png',height: 190,),
                                         ],
                                       ),
                                     )

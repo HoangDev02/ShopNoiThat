@@ -16,7 +16,7 @@ class Detail extends StatelessWidget{
             decoration: const BoxDecoration(
               color: Colors.black12
             ),
-            child: Image.asset('images/gheSofa_3.png'),
+            child: Image.asset('assets/images/gheSofa_3.png'),
           ),
           Container(
             child: Column(
@@ -30,7 +30,7 @@ class Detail extends StatelessWidget{
                         height: 50,
                         width: 60,
                       ),
-                      Expanded(child: Image.asset('images/love.png', height: 30,)
+                      Expanded(child: Image.asset('assets/images/love.png', height: 30,)
                       )
                     ],
                   ),
@@ -53,7 +53,7 @@ class Detail extends StatelessWidget{
                       ),
                       Container(
                         margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                        child: Image.asset('images/love.png', height: 30),
+                        child: Image.asset('assets/images/love.png', height: 30),
                       ),
                       Container(
                         child: Text("(6.573 reviews)"),

@@ -30,7 +30,7 @@ class Cart extends StatelessWidget{
                       color: Colors.black12,
                       borderRadius: BorderRadius.circular(20)
                   ),
-                  child: Image.asset('images/gheSofa_1.png'),
+                  child: Image.asset('assets/images/gheSofa_1.png'),
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -131,7 +131,7 @@ class Cart extends StatelessWidget{
                       color: Colors.black12,
                       borderRadius: BorderRadius.circular(20)
                   ),
-                  child: Image.asset('images/gheSofa_1.png'),
+                  child: Image.asset('assets/images/gheSofa_1.png'),
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(10, 0, 0, 0),

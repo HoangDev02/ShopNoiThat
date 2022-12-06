@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:shopnoithat/pages/CreateProductPages.dart';
+import 'package:shopnoithat/pages/SpecialPages.dart';
 
 class SpecialOffers extends StatelessWidget{
   @override
@@ -18,8 +20,17 @@ class SpecialOffers extends StatelessWidget{
                 width: 130,
               ),
               Expanded(
-                  child: Text("See All", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),)
-              ),
+                child:InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Special()),
+                    );
+                  },
+                  child: Container(
+                    child: Text("See all", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),),)
             ],
           ),
         ),
@@ -84,7 +95,7 @@ class SpecialOffers extends StatelessWidget{
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Image.asset('images/gheSofa_1.png',height: 200,width: 180,),
+                              Image.asset('assets/images/gheSofa_1.png',height: 200,width: 180,),
                             ],
                           ),
                         )
@@ -103,7 +114,10 @@ class SpecialOffers extends StatelessWidget{
             children: [
               InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, 'createproduct');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>CreateProduct()),
+                    );
                   },
                   child: Column(
                     children: [
@@ -128,8 +142,6 @@ class SpecialOffers extends StatelessWidget{
               ),
               InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, 'products');
-
                   },
                   child: Column(
                     // crossAxisAlignment: CrossAxisAlignment.center,

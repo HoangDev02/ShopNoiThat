@@ -1,12 +1,23 @@
 
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopnoithat/Screens/cartScreens/cart.dart';
+import 'package:shopnoithat/pages/CartPages.dart';
+import 'package:shopnoithat/pages/Profile.dart';
 
 import '../Screens//HomeScreens/MostPopular.dart';
 import '../Screens/HomeScreens/Search.dart';
 import '../Screens/HomeScreens/SpecialOffers.dart';
 
-class HomePages extends StatelessWidget {
+class HomePages extends StatefulWidget {
+  const HomePages({Key? key}) : super(key: key);
+
+  @override
+  State<HomePages> createState() => _HomePageState();
+
+}
+class _HomePageState extends State<HomePages> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -87,14 +98,21 @@ class HomePages extends StatelessWidget {
             children: [
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context, '/');
+                },
                 icon: const Icon(
                   Icons.home_outlined,
                 ),
               ),
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CartPages())
+                  );
+                },
                 icon: const Icon(
                   CupertinoIcons.bag,
                 ),
@@ -102,7 +120,6 @@ class HomePages extends StatelessWidget {
               IconButton(
                 color: Colors.black,
                 onPressed: () {
-                  Navigator.pushNamed(context, 'cart');
                 },
                 icon: const Icon(
                   CupertinoIcons.cart,
@@ -110,14 +127,20 @@ class HomePages extends StatelessWidget {
               ),
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                },
                 icon: const Icon(
                   CupertinoIcons.briefcase,
                 ),
               ),
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Profile()),
+                  );
+                },
                 icon: const Icon(
                   CupertinoIcons.profile_circled,
                 ),
